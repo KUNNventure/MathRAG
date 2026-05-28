@@ -1,0 +1,126 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+**/__pycache__/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+.venv311/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# QA Test credentials and config backups
+config/test_credentials.yaml
+config/settings.yaml.qa_backup
+config/settings.yaml.bak
+
+# IDE
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Project-specific
+data/
+deploy/modelscope-bundle/
+cache/
+logs/
+*.log
+traces.jsonl
+artifacts/
+.claude/skills/
+.github/skills/
+tests/
+DEV_SPEC.md
+results/_MASTER_SUMMARY.json
+
+# Experiment outputs (keep root summary files if needed)
+results/*/
+!results/_*.json
+!results/_*.csv
+
+# Local ad-hoc images at repo root
+62d3c30086ca571f3b1feaeff48d2725.jpg
+d7bea6bc1319c6387c44278d408d48b8.jpg
+
+# Auto-coder skill cache
+.github/skills/auto-coder/.spec_hash
+
+# Secrets
+.env.local
+.env.*.local
+secrets.yaml
+nonexistent_traces.jsonl/

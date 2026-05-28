@@ -1,0 +1,219 @@
+{
+  "formula": "0.4*CR + 0.3*Faith + 0.3*CP",
+  "combined_at_ref_valid": [
+    {
+      "id": "E001b",
+      "cr": 0.8049,
+      "cp": 0.6712,
+      "faith": 0.8853,
+      "faith_raw": 0.8853,
+      "faith_kind": "faithfulness (RAGAS raw)",
+      "score_partial": 0.7514,
+      "score_full": 0.7889,
+      "rerank": "v0 英文",
+      "prompt": "v1",
+      "dir": "results/baseline_v2-ref-cr-cp",
+      "valid_combined_score": true,
+      "note": "同次 baseline 答案；仅 CR/CP 改为 @reference"
+    },
+    {
+      "id": "E004b",
+      "cr": 0.8066,
+      "cp": 0.6748,
+      "faith": 0.944,
+      "faith_raw": 0.8189,
+      "faith_kind": "边界5题合规拒答F=0计1；韦达仅无法确定计1",
+      "score_partial": 0.7539,
+      "score_full": 0.8083,
+      "rerank": "v2 中文",
+      "prompt": "v3.4",
+      "dir": "results/p3.4-r2-ref-cr-cp",
+      "valid_combined_score": true,
+      "note": "faith_adjusted_boundary5_weida（边界拒答+韦达合规计1）"
+    }
+  ],
+  "e004b_faith_raw_score": 0.7707,
+  "legacy_same_run": [
+    {
+      "id": "E001",
+      "cr": 0.8516,
+      "cp": 0.6393,
+      "faith": 0.8853,
+      "score_full": 0.798,
+      "dir": "results/baseline_v2/",
+      "metric_note": "旧 CR/CP 口径，同次全量"
+    },
+    {
+      "id": "E002",
+      "cr": 0.8339,
+      "cp": 0.6743,
+      "faith": 0.9183,
+      "score_full": 0.8114,
+      "dir": "results/p1.1-full48/",
+      "metric_note": "旧 CR/CP 口径，同次全量"
+    },
+    {
+      "id": "E005",
+      "cr": 0.7681,
+      "cp": 0.6335,
+      "faith": 0.8143,
+      "score_full": 0.7416,
+      "dir": "results/final-v3.4/",
+      "metric_note": "旧 CR/CP 口径，同次全量"
+    }
+  ],
+  "deltas": {
+    "E004b_minus_E001b_score": 0.0194,
+    "E004b_minus_E001b_score_p": 0.0025,
+    "E001b_minus_E001_legacy_score": -0.0091
+  },
+  "phase1_subset_at_ref": [
+    {
+      "id": "P1-1.5-ref",
+      "cr": 0.673,
+      "cp": 0.5694,
+      "score_partial": 0.6316,
+      "dir": "results/p1.5-ref-cr-cp",
+      "rerank": "v0 无 rerank",
+      "dense_bm25": "1:1",
+      "source_retrieval": "results/p1.5",
+      "vs_p1.1_ref_score_p": 0.0148,
+      "prior_old": {"cr": 0.6951, "cp": 0.4992, "score_partial": 0.6169},
+      "note": "21q; Phase1 子集 RRF-only @ref; 同切片 math_textbooks c1000"
+    },
+    {
+      "id": "P1-1.1b-ref",
+      "cr": 0.673,
+      "cp": 0.5325,
+      "score_partial": 0.6168,
+      "dir": "results/p1.1-ref-cr-cp",
+      "dense_bm25": "1:1",
+      "note": "21q; Phase1 rerank定稿 RRF 1:1"
+    },
+    {
+      "id": "P1-1b.2-ref",
+      "cr": 0.6571,
+      "cp": 0.5174,
+      "score_partial": 0.6012,
+      "dir": "results/p1b.2-ref-cr-cp",
+      "dense_bm25": "0.3:0.7",
+      "vs_p1.1_ref_score_p": -0.0156,
+      "prior_old": {"cr": 0.7043, "cp": 0.4862, "score_partial": 0.6171},
+      "note": "21q; BM25-heavy RRF; loses vs 1:1 @ref"
+    },
+    {
+      "id": "P1-1b.3-ref",
+      "cr": 0.6905,
+      "cp": 0.5373,
+      "score_partial": 0.6292,
+      "dir": "results/p1b.3-ref-cr-cp",
+      "dense_bm25": "0.7:0.3",
+      "vs_p1.1_ref_score_p": 0.0124,
+      "prior_old": {"cr": 0.6762, "cp": 0.5727, "score_partial": 0.6348},
+      "note": "21q; dense-heavy RRF; beats 1:1 @ref on subset"
+    }
+  ],
+  "phase1_full48_at_ref": [
+    {
+      "id": "E002",
+      "cr": 0.8339,
+      "cp": 0.6743,
+      "faith": 0.9183,
+      "score_partial": 0.7701,
+      "score_full": 0.8114,
+      "dir": "results/p1.1-full48",
+      "dense_bm25": "1:1",
+      "metric_note": "旧 CR/CP 口径，同次全量；无 full48 @ref 复算"
+    },
+    {
+      "id": "E002b",
+      "cr": 0.7726,
+      "cp": 0.6739,
+      "faith": 0.8348,
+      "faith_raw": 0.8348,
+      "score_partial": 0.7331,
+      "score_full": 0.7617,
+      "dir": "results/p1b.3-full48-ref-cr-cp",
+      "dense_bm25": "0.7:0.3",
+      "vs_E001b_score": -0.0272,
+      "vs_E002_legacy_score": -0.0497,
+      "vs_p1.1_ref_subset_score_p": 0.1163,
+      "valid_combined_score": true,
+      "note": "CR/CP@ref + 同次 p1b.3-full48 Faith；仍低于 E001b/E002 旧全量",
+      "subset_vs_full_analysis": {
+        "subset_ref_score_p": 0.6292,
+        "vs_p1_1b_ref_delta": 0.0124,
+        "subset_per_query_wins": "8 win / 6 lose / 7 tie vs 1.1-b' (subset-only @ref run)",
+        "full48_vs_E002_score": -0.0497,
+        "full48_vs_E002_score_p": -0.037,
+        "full48_faith_delta_vs_E002": -0.0835,
+        "decision": "Do not adopt 0.7:0.3; keep RRF 1:1"
+      }
+    }
+  ],
+  "phase1_v0_no_rerank_subset_2026_05_18": {
+    "id": "P1-1.5-ref",
+    "traditional_cr_cp_subset": {"cr": 0.6951, "cp": 0.4992, "score_partial": 0.6169, "dir": "results/p1.5"},
+    "at_ref_subset": {"cr": 0.673, "cp": 0.5694, "score_partial": 0.6316, "dir": "results/p1.5-ref-cr-cp"},
+    "vs_p1_1b_ref": {"cr_delta": 0.0, "cp_delta": 0.0369, "score_p_delta": 0.0148},
+    "decision": "Subset: v0 beats v2 on CP@ref with flat CR; full48 done below"
+  },
+  "phase1_v0_no_rerank_full48_2026_05_18": {
+    "id": "P1-1.5-full48-ref",
+    "cr": 0.791,
+    "cp": 0.6801,
+    "faith": 0.9509,
+    "faith_raw": 0.8259,
+    "score_partial": 0.7466,
+    "score_full": 0.8057,
+    "rerank": "v0 无 rerank",
+    "prompt": "v3.4",
+    "dir": "results/p1.5-full48-v34-ref-cr-cp",
+    "source_retrieval": "results/p1.5-full48-v34",
+    "traditional_cr_cp_full48": "skipped (--no-metrics pipeline)",
+    "vs_E004b_score": -0.0026,
+    "vs_E004b": {"cr_delta": -0.0156, "cp_delta": 0.0053, "score_p_delta": -0.0073},
+    "decision": "Do not drop rerank; keep E004b production (v2 + v3.4)"
+  },
+  "phase1_fusion_decision_2026_05_18": "RRF dense:bm25=1:1; 1b.2 rejected; 1b.3 vs E002(v1 gen) only - NOT vs E004b(v3.4 production 0.8083)",
+  "production_config": {
+    "retrieval": "Phase1 1.1-b: v2 rerank, k10, RRF 1:1, c1000",
+    "generation": "v3.4 answer_generation_v3.4.txt",
+    "report_score": "E004b 0.8083 @ref+adj Faith",
+    "not_production": "E002 p1.1-full48 0.8114 = same retrieval + v1 gen (Phase1 acceptance only)"
+  },
+  "phase2_subset_at_ref": [
+    {
+      "id": "P2-k5-ref",
+      "cr": 0.6476,
+      "cp": 0.6558,
+      "score_partial": 0.6509,
+      "dir": "results/p2-c1500-k5-ref-cr-cp",
+      "collection": "math_textbooks_c1500",
+      "top_k": 5,
+      "vs_p1.1_ref_score_p": 0.0341,
+      "note": "21q; vs 1.1-b-ref 0.6168; k5 vs k10, not controlled ablation"
+    },
+    {
+      "id": "P2-k7-ref",
+      "cr": 0.554,
+      "cp": 0.56,
+      "score_partial": 0.5564,
+      "dir": "results/p2-c1500-k7-ref-cr-cp",
+      "collection": "math_textbooks_c1500",
+      "top_k": 7,
+      "vs_p1.1_ref_score_p": -0.0604,
+      "vs_p2_k5_ref_score_p": -0.0945,
+      "prior_old_in_report": {
+        "cr": 0.5668,
+        "cp": 0.4425,
+        "score_partial": 0.5171
+      },
+      "note": "21q; below 1.1-b-ref and P2-k5-ref; k7 not sweet spot"
+    }
+  ],
+  "invalid_do_not_use": [
+    "E004b CR/CP + E005 Faith（final 另次全量 Faith，非调整口径）",
+    "任意 @ref CR/CP + 与源答案不一致来源的 Faith"
+  ]
+}

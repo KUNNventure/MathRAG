@@ -1,0 +1,74 @@
+# ModelScope Space — set DASHSCOPE_API_KEY in Space Secrets (not in this file)
+
+llm:
+  provider: "qwen"
+  model: "qwen-max"
+  deployment_name: ""
+  azure_endpoint: ""
+  api_version: ""
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  temperature: 0.0
+  max_tokens: 4096
+
+embedding:
+  provider: "qwen"
+  model: "text-embedding-v3"
+  dimensions: 1024
+  azure_endpoint: ""
+  deployment_name: ""
+  api_version: ""
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+
+vision_llm:
+  enabled: false
+  provider: "qwen"
+  model: "qwen-vl-max"
+  azure_endpoint: ""
+  deployment_name: ""
+  api_version: ""
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  max_image_size: 2048
+
+vector_store:
+  provider: "chroma"
+  persist_directory: "./chroma_db"
+  collection_name: "math_textbooks"
+
+retrieval:
+  dense_top_k: 20
+  sparse_top_k: 20
+  fusion_top_k: 10
+  rrf_k: 60
+  dense_rrf_weight: 1.0
+  sparse_rrf_weight: 1.0
+
+generation:
+  prompt_path: "./config/prompts/answer_generation_v3.4.txt"
+
+rerank:
+  enabled: true
+  provider: "llm"
+  model: "qwen-max"
+  top_k: 5
+
+evaluation:
+  enabled: false
+  provider: "ragas"
+  metrics:
+    - "hit_rate"
+
+observability:
+  log_level: "WARNING"
+  trace_enabled: false
+  trace_file: "/tmp/rag_traces.jsonl"
+  structured_logging: false
+
+ingestion:
+  chunk_size: 1000
+  chunk_overlap: 200
+  splitter: "recursive"
+  batch_size: 10
+  chunk_refiner:
+    use_llm: false
+  metadata_enricher:
+    use_llm: false
