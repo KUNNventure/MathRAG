@@ -1,6 +1,8 @@
 # MathRAG
 
-**产品入口：[初中数学问一问](https://www.modelscope.cn/studios/KUNNventure/Math_Teaching_Material/summary)**
+**仓库：** https://github.com/KUNNventure/MathRAG
+
+**产品入口：** [初中数学问一问](https://www.modelscope.cn/studios/KUNNventure/Math_Teaching_Material/summary)**
 
 **项目简介：** 面向初中数学辅导场景（教培/家教快速查阅知识点）的模块化 RAG 系统，构建3000+chunks知识库，并通过三阶段消融将综合 Score 从 0.777 优化到 0.808。
 
@@ -167,7 +169,7 @@ flowchart LR
 
 ```bash
 # 1) 克隆项目
-git clone <your-repo-url>
+git clone https://github.com/KUNNventure/MathRAG.git
 cd MathRAG
 
 # 2) 本地运行准备（venv + 依赖 + .env）
