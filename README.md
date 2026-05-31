@@ -1,10 +1,10 @@
-# K12 数学教研 RAG 问答系统
+# 数学问一问
 
-**独立开发** · 2025.07 – 2025.12 · [ModelScope 在线体验 · 数学问一问](https://www.modelscope.cn/studios/KUNNventure/MathAsk)
+**独立开发** · 2025.07 – 2025.12 · [ModelScope 在线体验](https://www.modelscope.cn/studios/KUNNventure/MathAsk)
 
 **仓库：** https://github.com/KUNNventure/MathRAG
 
-面向 K12 数学教研场景（覆盖初中全学段）构建模块化 RAG 系统，支持混合检索与引用级问答，并通过三阶段迭代将综合 Score 从 0.777 优化至 0.808。
+面向初中数学场景的智能问答产品，回答有据、来源可查；底层为模块化 RAG 系统（混合检索 + 引用级问答），并通过三阶段迭代将综合 Score 从 0.777 优化至 0.808。
 
 **技术栈：** Python · Streamlit · BM25 · RRF · Dense Embedding · LLM Rerank (qwen-max) · RAGAS · MCP
 
