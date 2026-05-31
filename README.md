@@ -1,6 +1,6 @@
 # K12 数学教研 RAG 问答系统
 
-**独立开发** · 2025.07 – 2025.12 · [ModelScope 在线体验（1.5k+ 访问）](https://www.modelscope.cn/studios/KUNNventure/Math_Teaching_Material)
+**独立开发** · 2025.07 – 2025.12 · [ModelScope 在线体验 · 数学问一问](https://www.modelscope.cn/studios/KUNNventure/MathAsk)
 
 **仓库：** https://github.com/KUNNventure/MathRAG
 
