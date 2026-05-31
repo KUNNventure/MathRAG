@@ -1,4 +1,4 @@
-"""Gradio demo for ModelScope Spaces — 初中数学教材 RAG 问答."""
+"""Gradio demo for ModelScope Spaces — K12 数学教研 RAG 问答."""
 
 from __future__ import annotations
 
@@ -76,10 +76,10 @@ demo = gr.Interface(
         gr.Textbox(label="回答", lines=12),
         gr.Textbox(label="引用来源", lines=8),
     ],
-    title="初中数学教材问答系统",
+    title="K12 数学教研 RAG 问答",
     description=(
-        "基于人教版7-9年级数学教材（6册），支持知识点检索、例题查询。"
-        "教材范围外的问题（如导数）会明确提示。"
+        "面向初中数学教研场景的模块化 RAG 问答，支持混合检索与引用级回答。"
+        "超纲问题（如导数）会明确提示。"
     ),
     examples=EXAMPLES,
     examples_per_page=len(EXAMPLES),

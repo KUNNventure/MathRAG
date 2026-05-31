@@ -196,7 +196,7 @@ def query(
 
     if not results:
         return {
-            "answer": "未检索到相关教材内容，请换一种问法或确认知识库已导入。",
+            "answer": "未检索到相关内容，请换一种问法再试。",
             "sources": [],
         }
 
